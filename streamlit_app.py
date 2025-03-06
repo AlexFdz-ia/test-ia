@@ -3,7 +3,7 @@ from openai import OpenAI
 from PyPDF2 import PdfReader
 import google.generativeai as genai
 
-api_key="AIzaSyDJ7JahaV2HEmQx-RWPeFbvTVhYJZ8DECo"
+api_key=""
 
 # Funcion para generar la respuesta de Gemini
 def generate_answer(system_message, chat_history, prompt):
