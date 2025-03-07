@@ -3,13 +3,13 @@ from openai import OpenAI
 from PyPDF2 import PdfReader
 import google.generativeai as genai
 
-api_key="AIzaSyDJ7JahaV2HEmQx-RWPeFbvTVhYJZ8DECo"
+google_api_key=st.secrets["GOOGLE_API_KEY"]
 
 # Funcion para generar la respuesta de Gemini
 def generate_answer(system_message, chat_history, prompt):
 
     # Establecemos la API de Google
-    genai.configure(api_key=api_key)
+    # genai.configure(api_key=google_api_key)
     # Seleccionamos el modelo a usar
     model = genai.GenerativeModel('gemini-1.5-flash')
 
@@ -29,7 +29,7 @@ def generate_answer(system_message, chat_history, prompt):
 # Show title and description.
 st.title("📄 Test creator")
 st.write(
-    "Upload a document below and ask a let Gemini create a full test! "
+    "Upload a document below and let Gemini create a full test! "
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
@@ -92,7 +92,7 @@ else:
         )
 
         # Modelo para contar el numero de tokens de un mensaje
-        genai.configure(api_key=api_key)
+        genai.configure(api_key=google_api_key)
         model = genai.GenerativeModel("models/gemini-1.5-flash")
 
         for num_page in range(total_pages):
