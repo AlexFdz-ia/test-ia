@@ -2,7 +2,7 @@
 
 A simple Streamlit app that answers questions about an uploaded document via Gemini1.5-flash.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://document-question-answering-template.streamlit.app/)
+[![Open in Streamlit](https://test-ia.streamlit.app/)
 
 ### How to run it on your own machine
 
