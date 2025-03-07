@@ -102,14 +102,15 @@ else:
             msg_placeholder = system_message + page.extract_text()
 
             # Contamos el número de tokens usado en el mensaje del sistema
-            num_tokens = model.count_tokens(msg_placeholder).total_tokens
+            # num_tokens = model.count_tokens(msg_placeholder).total_tokens
 
             # Comprobamos que no supere el límite establecido por Gemini
-            if num_tokens >= 1000000:
-                break
-            else:
+            # if num_tokens >= 1000000:
+            #     break
+            # else:
             # Añadimos el texto al mensaje del sistema
-                system_message += page.extract_text()
+            #     system_message += page.extract_text()
+            system_message += page.extract_text()
 
         
     
